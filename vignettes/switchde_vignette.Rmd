@@ -45,8 +45,9 @@ Governed by three parameters:
 Example installation from Bioconductor:
 
 ```{r install-bioc, eval = FALSE}
-source("https://bioconductor.org/biocLite.R")
-biocLite("switchde")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("switchde")
 ```
 
 Example installation from Github:

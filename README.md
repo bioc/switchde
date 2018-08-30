@@ -12,8 +12,9 @@ Inference of switch-like differential expression along single-cell trajectories
 ### Installation from Bioconductor
 
 ```r
-source("https://bioconductor.org/biocLite.R")
-biocLite("switchde")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("switchde")
 ```
 
 ### Installation from Github using Devtools
